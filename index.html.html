@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación al Cine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 50px;
+        }
+        .invitacion {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin: auto;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        .boton {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .boton:hover {
+            background-color: #0056b3;
+        }
+        #mensaje {
+            margin-top: 20px;
+            display: none;
+            color: #333;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="invitacion">
+        <h1>¡Hola mi pollito de colores!</h1>
+        <p>Quería invitarte a ver intensamente 2 conmigo este viernes ¿Que dices?.</p>
+        <p>¿Te gustaría ir ver la peli conmigo?</p>
+        <div class="boton" onclick="mostrarConfeti()">Clayo que yes!</div>
+        <div id="mensaje">¡Nos vemos el viernes! 🎉</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script>
+        function mostrarConfeti() {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+            document.getElementById('mensaje').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
+
